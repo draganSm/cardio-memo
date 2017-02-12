@@ -34,7 +34,7 @@ export const UNIVERSAL_KEY = 'UNIVERSAL_CACHE';
     RouterModule.forRoot([], { useHash: false }),
 
     SharedModule.forRoot(),
-    AppModule,
+    AppModule
   ],
   providers: [
     { provide: 'isBrowser', useValue: isBrowser },
