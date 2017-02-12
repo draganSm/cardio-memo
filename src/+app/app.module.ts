@@ -8,7 +8,7 @@ import { TodoModule } from './+todo/todo.module';
 import { SharedModule } from './shared/shared.module';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent, XLargeDirective } from './app.component';
+import { AppComponent, XLargeDirective } from './app/app.component';
 
 
 @NgModule({
@@ -24,4 +24,4 @@ import { AppComponent, XLargeDirective } from './app.component';
 export class AppModule {
 }
 
-export { AppComponent } from './app.component';
+export { AppComponent } from './app/app.component';
