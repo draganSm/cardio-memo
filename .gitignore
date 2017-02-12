@@ -27,3 +27,6 @@ webpack.records.json
 
 # Bootstrap #
 bootstrap.min.css
+
+# Specs #
+cardio.specs.pages
