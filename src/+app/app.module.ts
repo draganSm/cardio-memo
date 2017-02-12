@@ -9,10 +9,14 @@ import { SharedModule } from './shared/shared.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent, XLargeDirective } from './app/app.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
-  declarations: [ AppComponent, XLargeDirective ],
+  declarations: [ 
+    AppComponent, 
+    XLargeDirective,
+    NavbarComponent ],
   imports: [
     SharedModule,
     HomeModule,
