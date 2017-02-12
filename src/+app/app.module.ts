@@ -10,13 +10,16 @@ import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent, XLargeDirective } from './app/app.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { FormComponent } from './forms/form/form.component';
 
 
 @NgModule({
   declarations: [ 
     AppComponent, 
-    XLargeDirective,
-    NavbarComponent ],
+    FormComponent,
+    NavbarComponent,
+    XLargeDirective
+  ],
   imports: [
     SharedModule,
     HomeModule,
