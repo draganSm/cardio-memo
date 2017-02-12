@@ -2,6 +2,7 @@ var webpack = require('webpack');
 var path = require('path');
 var clone = require('js.clone');
 var webpackMerge = require('webpack-merge');
+var copyWebpackPlugin = require('copy-webpack-plugin');
 
 export var commonPlugins = [
   new webpack.ContextReplacementPlugin(
@@ -48,7 +49,7 @@ export var commonConfig = {
 
 // Client.
 export var clientPlugins = [
-
+  
 ];
 export var clientConfig = {
   target: 'web',
@@ -69,7 +70,12 @@ export var clientConfig = {
 
 // Server.
 export var serverPlugins = [
-
+  new copyWebpackPlugin([
+    {  
+      from: root('node_modules/bootstrap/dist/css/bootstrap.min.css'),
+      to: root('src/assets')
+    }
+  ])
 ];
 export var serverConfig = {
   target: 'node',

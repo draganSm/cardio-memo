@@ -5,6 +5,8 @@ const webpackMerge = require('webpack-merge');
 const V8LazyParseWebpackPlugin = require('v8-lazy-parse-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 import webpackConfig, { root,  includeClientPackages } from './webpack.config';
+const copyWebpackPlugin = require('copy-webpack-plugin');
+
 // const CompressionPlugin = require('compression-webpack-plugin');
 
 
@@ -139,6 +141,12 @@ export const clientConfig = {
 // Server.
 
 export const serverPlugins = [
+  new copyWebpackPlugin([
+    {  
+      from: root('node_modules/bootstrap/dist/css/bootstrap.min.css'),
+      to: root('src/assets')
+    }
+  ]),
   new webpack.optimize.UglifyJsPlugin({
     // beautify: true,
     mangle: false, // to ensure process.env still works
