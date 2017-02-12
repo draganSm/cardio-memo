@@ -1,10 +1,25 @@
 import { Injectable } from '@angular/core';
+import FieldDefinition from './fieldDefinition';
+import FieldValidation from './fieldValidation';
+import FieldValidationTypes from './fieldValidationTypes';
 
 @Injectable()
 export default class FormDefinitionService {
 
-    // TODO: replace Object to FieldDefinition
-    getFormFields(formName: String): Promise<Object[]> {
-        return Promise.resolve([{a: 1, b: 'test'}]);
+    getFormFields(formName: String): Promise<FieldDefinition[]> {
+        return Promise.resolve([
+            <FieldDefinition>{
+                name: 'test',
+                label: 'test label',
+                path: 'path.test',
+                validations: [
+                    <FieldValidation>{
+                        validationType: FieldValidationTypes.Required,
+                        validationMessage: 'The field #{name} is required',
+                        priority: 0
+                    }
+                ]
+            }
+        ]);
     }
 }
