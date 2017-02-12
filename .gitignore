@@ -30,3 +30,6 @@ bootstrap.min.css
 
 # Specs #
 cardio.specs.pages
+
+# Webpack-mocha #
+.tmp
