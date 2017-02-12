@@ -1,5 +1,6 @@
 
 <cm-navbar></cm-navbar>
 <h3 id="universal">Test</h3>
-<cm-form></cm-form>
+<cm-form (formDefinition)="testForm"></cm-form>
+<div>A: {{testForm | json}}</div>
 <router-outlet></router-outlet>

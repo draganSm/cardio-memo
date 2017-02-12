@@ -1,5 +1,5 @@
 import { Component, Directive, ElementRef, Renderer, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
-
+import FormDefinitionService from '../core/formDefinition.service';
 //
 /////////////////////////
 // ** Example Directive
@@ -26,4 +26,12 @@ export class XLargeDirective {
   templateUrl: './app.component.html'
 })
 export class AppComponent {
+  testForm: Object[];
+
+  constructor(private formDefinitionService: FormDefinitionService) {
+    this.formDefinitionService.getFormFields('test')
+      .then(fields => {
+        this.testForm = fields;
+      });
+  }
 }
