@@ -11,7 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent, XLargeDirective } from './app/app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormComponent } from './forms/form/form.component';
-
+import FormDefinitionService from './core/formDefinition.service';
 
 @NgModule({
   declarations: [ 
@@ -26,6 +26,9 @@ import { FormComponent } from './forms/form/form.component';
     AboutModule,
     TodoModule,
     AppRoutingModule
+  ],
+  providers: [
+    FormDefinitionService
   ]
 })
 export class AppModule {
