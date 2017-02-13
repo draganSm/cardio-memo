@@ -2,6 +2,6 @@ import FieldValidationTypes from './fieldValidationTypes'
 
 export default class FieldValidation {
     validationType:FieldValidationTypes;
-    priority: Number;
-    validationMessage: String;
+    priority: number;
+    validationMessage: string;
 }

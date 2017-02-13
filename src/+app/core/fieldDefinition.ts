@@ -1,9 +1,9 @@
 import FieldValidation from './fieldValidation';
 
 export default class FieldDefinition {
-    label: String;
-    name: String;
-    path: String;
+    label: string;
+    name: string;
+    path: string;
     validations: FieldValidation[];
 }
 
