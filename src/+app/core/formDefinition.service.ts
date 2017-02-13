@@ -9,7 +9,7 @@ export default class FormDefinitionService {
     getFormFields(formName: String): Promise<FieldDefinition[]> {
         return Promise.resolve([
             <FieldDefinition>{
-                name: 'test',
+                name: 'firstName',
                 label: 'test label',
                 path: 'path.test',
                 validations: [
