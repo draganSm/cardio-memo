@@ -12,6 +12,8 @@ import { AppComponent, XLargeDirective } from './app/app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormComponent } from './forms/form/form.component';
 import FormDefinitionService from './core/formDefinition.service';
+import {ContentService} from './core/content.service';
+
 
 @NgModule({
   declarations: [ 
@@ -28,7 +30,8 @@ import FormDefinitionService from './core/formDefinition.service';
     AppRoutingModule
   ],
   providers: [
-    FormDefinitionService
+    FormDefinitionService, 
+    ContentService
   ]
 })
 export class AppModule {
