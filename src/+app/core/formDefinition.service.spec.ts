@@ -1,5 +1,5 @@
 describe('FormDefinitionService', () => {
-    it ('Should be called', () => {
+    it('Should be called', () => {
         console.log('Test');
     });
 });
